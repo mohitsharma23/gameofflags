@@ -1,0 +1,59 @@
+hr{
+  margin: 0 auto;
+  width: 70%;
+}
+
+/* start page && end page*/
+.start{
+  background-color: white;
+  width: 30%;
+  min-height: 250px;
+  margin: auto;
+  margin-top: 12%;
+}
+
+.start>h1{
+  font-weight: bold;
+  padding: 5px;
+  text-align: center;
+}
+
+.start>h5{
+  padding: 10px;
+}
+
+.start>div{
+  text-align: center;
+  padding: 5px;
+}
+
+.result>p{
+  font-size: 50px;
+  padding: 10px;
+}
+
+/* game */
+#body>h3{
+  padding-top: 20px;
+  font-size: 40px;
+}
+
+.flag{
+  margin: 20px;
+  padding: 20px;
+}
+
+#main{
+  width: 30%;
+  margin-left: 40%;
+}
+
+#opt{
+  text-align: left;
+  padding: 3px;
+}
+
+#buttons>button{
+  cursor: pointer;
+  margin: 20px;
+}

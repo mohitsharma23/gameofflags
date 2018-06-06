@@ -1,0 +1,46 @@
+<!-- start page -->
+<div class="start" *ngIf="res === -1">
+  <h1>Game of Flags</h1>
+  <hr />
+  <h5>Rules:</h5>
+  <ul>
+    <li>Each question contains 4 options.</li>
+    <li>Only one option is correct.</li>
+    <li>1 mark is awarded for right answer and no negative marking is there.</li>
+  </ul>
+  <div>
+    <button class="btn btn-primary" (click)="startGame()">Start Game</button>
+  </div>
+</div>
+
+
+<!-- game -->
+<div style="text-align:center" id="body" *ngIf="res === 0">
+  <h3>{{num}}</h3>
+  <hr>
+  <div class="flag">
+    <span style="width: 200px; line-height: 150px" class="flag-icon flag-icon-{{flag | lowercase}}"></span>
+  </div>
+
+  <div id="main">
+    <form *ngFor="let option of options" id="opt">
+      <input type="radio" [(ngModel)]="op" name="option" [value]="option"> {{option}}
+    </form>
+  </div>
+
+  <div id="buttons">
+    <button class="btn btn-primary" (click)="next()">Next</button>
+    <button class="btn btn-success" (click)="endGame()">End Game</button>
+  </div>
+</div>
+
+
+<!-- result page -->
+<div class="start" *ngIf="res === 1">
+  <h1>Your Result</h1>
+  <hr>
+  <div class="result">
+    <p>{{score}} / {{num}}</p>
+    <button class="btn btn-danger" (click)="resetGame()">Reset Game</button>
+  </div>
+</div>
